@@ -1,0 +1,249 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+	box-sizing: border-box;
+	overflow: hidden;
+	color: black;
+}
+
+h2{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5rem;
+	z-index: 2;
+	font-weight: 500;
+	padding: 15px 50px 0 20px;
+	white-space: nowrap;
+}
+
+h1{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 4rem;
+	z-index: 2;
+	font-weight: 500;
+	padding: 15px 50px 0 20px;
+	white-space: nowrap;
+}
+
+.lightSwitch{
+	display: flex;
+	width: max-content;
+	align-items: flex-end;
+	transform: scale(0.38);
+	position: relative;
+	top: -1.7%;
+	left: -26%;
+}
+
+.infoFlex{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	height: 100vh;
+	position: absolute;
+}
+
+.left, .right{
+	z-index: 2;
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.right{
+	position: relative;
+	left: 3.5%;
+}
+
+.map{
+    width: 100%;
+    height: 100vh;
+    background-color: #191A1Aff;
+}
+
+.marker {
+	
+	background-size: cover;
+	width: 130px;
+	height: 130px;
+}
+
+.dark{
+	background-image: url('lightISS.png');
+}
+
+.light{
+	background-image: url('darkISS.png');
+}
+
+body.dark-theme {
+	background-color: #333;
+}
+
+.text-container {
+	max-width: 600px;
+	text-align: center;
+}
+
+h2 {
+	margin-bottom: 0;
+}
+
+h3 {
+	color: #0054B0;
+}
+
+p {
+	letter-spacing: 1px;
+}
+
+body.dark-theme h2, body.dark-theme p {
+	color: #ddd;
+}
+
+.toggle input[type=checkbox] {
+	display: none;
+}
+
+.toggle label {
+	background-color: #777;
+	border: 2px solid #555;
+	border-radius: 50px;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: all ease-in-out 0.3s;
+	width: 100px;
+	height: 50px;
+}
+
+.toggle label::after {
+	background-color: #555;
+	border-radius: 50%;
+	content: ' ';
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	transition: all ease-in-out 0.3s;
+	width: 42px;
+	height: 42px;
+}
+
+.toggle input[type=checkbox]:checked ~ label {
+	background-color: #00a0fc;
+	border-color: #006dc9;
+}
+
+.toggle input[type=checkbox]:checked ~ label::after {
+	background-color: #0054B0;
+	transform: translateX(50px);
+}
+
+.lds-hourglass {
+	z-index: 6;
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+  }
+  .lds-hourglass:after {
+	content: " ";
+	display: block;
+	border-radius: 50%;
+	width: 0;
+	height: 0;
+	margin: 8px;
+	box-sizing: border-box;
+	border: 32px solid #323033ff;
+	border-color: #323033ff transparent #323033ff transparent;
+	animation: lds-hourglass 1.2s infinite;
+  }
+  @keyframes lds-hourglass {
+	0% {
+	  transform: rotate(0);
+	  animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	}
+	50% {
+	  transform: rotate(900deg);
+	  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+	100% {
+	  transform: rotate(1800deg);
+	}
+  }
+
+  .loading{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	background-color: #D1D3D4ff;
+	z-index: 6;
+	
+	transition: all 1s;
+  }
+
+@media only screen and (max-width: 576px){
+	h2{
+		font-size: 1.2rem;
+	}
+	.lightSwitch{
+		transform: scale(0.3);
+		left: -70%;
+	}
+	.right{
+		width: 20%;
+		left: -30%;
+	}
+}

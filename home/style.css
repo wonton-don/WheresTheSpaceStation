@@ -1,0 +1,194 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #D1D3D4ff;
+  font-family: 'Roboto', sans-serif;
+  color: #323033ff;
+}
+.scene,
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 10px;
+}
+
+.headerFlex{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+h1{
+  position: relative;
+  top: 50px;
+  text-align: center;
+  font-weight: 450;
+  font-size: 7rem;
+  width: 17ch;
+}
+.container{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.aFlex{
+  position: absolute;
+  width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 8%;
+  left: -2%;
+}
+
+.a{
+  text-decoration: underline;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.15s;
+  font-size: 1.7rem;
+  font-weight: 450;
+  height: fit-content;
+  color: #323033ff;
+  margin: 0 5% 0 5%;
+}
+
+.loading{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #D1D3D4ff;
+  transition: all 0.2s;
+  z-index: 6;
+}
+
+.none{
+  display: none;
+}
+
+.a:hover{
+  color: rgb(99, 96, 102)
+}
+
+.lds-hourglass {
+  z-index: 6;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transition: all 0.2s;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #323033ff;
+  border-color: #323033ff transparent #323033ff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+@media only screen and (min-width: 768px){
+  body{
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  .a{
+    font-size: 2.3rem;
+    white-space: nowrap;
+    margin: 0 3.5% 0 3.5%;
+  }
+
+  .aFlex{
+    top: 14.5%;
+  }
+
+  canvas{
+    top: 1%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .aFlex{
+    top: -20%;
+    left: -2%;
+  }
+
+  h1{
+    top: 10px;
+  }
+
+  canvas{
+    top: 2%;
+  }
+
+  .a{
+    font-size: 2rem;
+    white-space: nowrap;
+    margin: 0 3% 0 3%;
+  }
+
+  .aFlex{
+    top: 10%;
+
+  }
+}
+
+@media only screen and (max-width: 576px){
+  h1{
+    font-size: 5rem;
+    top: 15px;
+  }
+  
+  body{
+    overflow: hidden;
+  }
+
+  .aFlex{
+    top: 2.5%;
+    left: 0%;
+    flex-wrap: wrap;
+  }
+
+  .a{
+    font-size: 1.85rem;
+    margin: 0 10% 0 10%;
+  }
+
+  canvas{
+    top: 3%;
+  }
+
+}

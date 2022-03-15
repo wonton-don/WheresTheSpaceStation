@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./home/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="keywords"
+    content="ISS, Space Station, space, space station, iss, international space station, International Space Station, station, html, css, javascript, nasa iss, nasa, space craft, spaceship, space ship, spacecraft, cool, api, where, is, the, iss, wheres the iss, wheres the space station">
+  <meta name="description"
+    content="A website that shows the current location of the ISS as well as what the astronauts see from the ISS and who is currently on the station!">
+  <meta name="author" content="Justin Garner">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Where's The Space Station?</title>
+</head>
+
+<body>
+  <div class="loading">
+    <div class="lds-hourglass"></div>
+  </div>
+  <div class="headerFlex">
+    <h1>Where's The Space Station?</h1>
+  </div>
+  <div class="container">
+    <div class="aFlex">
+      <a class="a" href="./astronautInfo/astronautInfo.html">Current ISS
+        Crew</a>
+      <a class="a" href="./tracker/tracker.html">Track</a>
+      <a class="a" href="./liveFeed/liveFeed.html">ISS Live Feed</a>
+    </div>
+    <div class="scene"></div>
+  </div>
+  <script src="./home/three.min.js"></script>
+  <script src="./home/GLTFLoader.js"></script>
+  <script src="./home/app.js"></script>
+</body>
+
+</html>

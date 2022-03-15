@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where's The ISS</title>
+    <link rel="stylesheet" href="trackerStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="color: black;">
+    <div class="loading">
+        <div class="lds-hourglass"></div>
+    </div>
+    <div class=" infoFlex">
+        <div class="left">
+            <h2 class="latLon"></h2>
+            <h2><span class="location"></span></h2>
+        </div>
+        <div class="right">
+            <h2 class="altitude"></h2>
+            <h2 class="speed"></h2>
+            <div class="lightSwitch">
+                <h1>Dark</h1>
+                <div class="toggle">
+                    <input type="checkbox" id="toggle" />
+                    <label for="toggle"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map"></div>
+    <script src="trackerScript.js"></script>
+</body>
+
+</html>
